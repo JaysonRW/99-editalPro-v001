@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Partner, PartnerCategory } from '../types';
+import { Partner, PartnerCategory } from '../types.ts';
 
 const INITIAL_PARTNERS: Partner[] = [
   {

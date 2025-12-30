@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BudgetStats, ComplianceRule, Category } from '../types';
+import { BudgetStats, ComplianceRule, Category } from '../types.ts';
 
 interface CompliancePanelProps {
   stats: BudgetStats;

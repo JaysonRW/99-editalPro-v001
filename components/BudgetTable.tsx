@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BudgetItem, Category } from '../types';
+import { BudgetItem, Category } from '../types.ts';
 
 interface BudgetTableProps {
   items: BudgetItem[];

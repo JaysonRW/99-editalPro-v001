@@ -1,14 +1,14 @@
 
 import React, { useState, useMemo } from 'react';
-import { BudgetItem, Category, ComplianceRule, BudgetStats, AppTab } from './types';
-import Sidebar from './components/Sidebar';
-import Dashboard from './components/Dashboard';
-import BudgetTable from './components/BudgetTable';
-import CompliancePanel from './components/CompliancePanel';
-import DocumentsView from './components/DocumentsView';
-import SavedEditalsView from './components/SavedEditalsView';
-import PartnersView from './components/PartnersView';
-import SettingsView from './components/SettingsView';
+import { BudgetItem, Category, ComplianceRule, BudgetStats, AppTab } from './types.ts';
+import Sidebar from './components/Sidebar.tsx';
+import Dashboard from './components/Dashboard.tsx';
+import BudgetTable from './components/BudgetTable.tsx';
+import CompliancePanel from './components/CompliancePanel.tsx';
+import DocumentsView from './components/DocumentsView.tsx';
+import SavedEditalsView from './components/SavedEditalsView.tsx';
+import PartnersView from './components/PartnersView.tsx';
+import SettingsView from './components/SettingsView.tsx';
 
 const BUDGET_LIMIT = 500000;
 

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { SavedEdital } from '../types';
+import { SavedEdital } from '../types.ts';
 
 const INITIAL_EDITALS: SavedEdital[] = [
   {

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { AppDocument } from '../types';
+import { AppDocument } from '../types.ts';
 
 const INITIAL_DOCS: AppDocument[] = [
   { id: '1', name: 'Contrato Social.pdf', type: 'PDF', size: '2.4 MB', updatedAt: '12/05/2024', status: 'Aprovado', mandatory: true },

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BudgetStats } from '../types';
+import { BudgetStats } from '../types.ts';
 
 const formatCurrency = (val: number) => {
   return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
