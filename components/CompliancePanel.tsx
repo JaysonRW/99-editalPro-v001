@@ -1,6 +1,5 @@
 
-import React from 'react';
-import { BudgetStats, ComplianceRule, Category } from '../types.ts';
+import { BudgetStats, ComplianceRule, Category } from '../types';
 
 interface CompliancePanelProps {
   stats: BudgetStats;
@@ -54,34 +53,13 @@ const CompliancePanel: React.FC<CompliancePanelProps> = ({ stats, rules }) => {
                   />
                 </div>
               </div>
-              {isInvalid && (
-                <p className="text-[10px] text-red-600 font-bold mt-2 uppercase tracking-wide">
-                  Erro: Excedeu limite de {rule.maxPercentage}%
-                </p>
-              )}
             </div>
           );
         })}
-
-        <div className="mt-8 p-4 bg-slate-900 rounded-lg text-white">
-          <h4 className="text-xs font-bold text-slate-400 uppercase mb-3">Resumo da Verificação</h4>
-          <div className="space-y-3">
-            <SummaryItem label="Regras Ativas" value="03" />
-            <SummaryItem label="Alertas Críticos" value={rules.filter(r => (stats.categoryTotals[r.category as Category] / stats.totalBudget * 100) > r.maxPercentage).length.toString()} color="text-red-400" />
-            <SummaryItem label="Status Final" value={stats.totalBudget > stats.totalLimit ? "IRREGULAR" : "REGULAR"} color={stats.totalBudget > stats.totalLimit ? "text-red-400" : "text-green-400"} />
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
-const SummaryItem = ({ label, value, color = "text-white" }: { label: string, value: string, color?: string }) => (
-  <div className="flex justify-between items-center text-xs">
-    <span className="text-slate-500">{label}</span>
-    <span className={`font-bold ${color}`}>{value}</span>
-  </div>
-);
 
 const IconAlert = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>;
 

@@ -1,6 +1,5 @@
 
-import React from 'react';
-import { BudgetStats } from '../types.ts';
+import { BudgetStats } from '../types';
 
 const formatCurrency = (val: number) => {
   return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
@@ -15,7 +14,6 @@ const Dashboard: React.FC<DashboardProps> = ({ stats }) => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {/* Total Card */}
       <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
         <div className="flex flex-col">
           <span className="text-sm font-medium text-slate-500">Total do Projeto</span>
@@ -34,7 +32,6 @@ const Dashboard: React.FC<DashboardProps> = ({ stats }) => {
         </div>
       </div>
 
-      {/* Progress Bar Card */}
       <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm col-span-1 md:col-span-2">
         <div className="flex justify-between mb-4">
           <span className="text-sm font-medium text-slate-500">Execução Orçamentária</span>

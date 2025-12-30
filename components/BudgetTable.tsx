@@ -1,6 +1,5 @@
 
-import React from 'react';
-import { BudgetItem, Category } from '../types.ts';
+import { BudgetItem, Category } from '../types';
 
 interface BudgetTableProps {
   items: BudgetItem[];
@@ -74,13 +73,6 @@ const BudgetTable: React.FC<BudgetTableProps> = ({ items, onUpdate, onDelete }) 
               </td>
             </tr>
           ))}
-          {items.length === 0 && (
-            <tr>
-              <td colSpan={6} className="px-6 py-12 text-center text-slate-400 italic">
-                Nenhum item orçamentário adicionado.
-              </td>
-            </tr>
-          )}
         </tbody>
       </table>
     </div>

@@ -1,6 +1,5 @@
 
-import React from 'react';
-import { AppTab } from '../types.ts';
+import { AppTab } from '../types';
 
 interface SidebarProps {
   activeTab: AppTab;
